@@ -1,0 +1,49 @@
+スクレイピング組　参考資料
+
+・動作環境　Apple M1 Mac
+
+
+・エディタ　VsCode
+
+
+・使用ライブラリ　
+　1、selenium version--4.1.0
+　2、flask version--最新
+
+
+・seleniumのインストール
+　1、作業するために作成したフォルダに移動
+　2、ターミナルで pip3 install selenium==4.1.0
+　3、ターミナルで pip3 list　
+　4、出力結果にseleniumという項目があればインストール完了
+　＊参考 https://www.youtube.com/watch?v=VRFfAeW30qE
+
+
+・flaskのインストール
+　1、作業するために作成したフォルダに移動
+　2、ターミナルで pip3 install flask
+　3、ターミナルで　export FLASK_APP=hello　＊hello.pyで作成した場合
+　4、ターミナルで flask run
+　5、出力されたポートにアクセスして表示を確認
+　＊参考1 https://msiz07-flask-docs-ja.readthedocs.io/ja/latest/quickstart.html#a-minimal-application
+　＊参考2 https://www.youtube.com/watch?v=bzbrpkbjWe8
+
+
+〜現状できていること〜
+1、Pythonから予約システムにアクセス
+2、Pythonから予約システムにログイン
+3、予約システムにアクセス後に指定のリンクへ推移する
+4、予約状況をスクリーンショットで取得する
+5、指定のフォルダに保存する
+
+〜現状確認できていること〜
+1、flaskでseleniumが実行できる←←撮ってきたスクリーンショットの表示が簡単にできる
+2、find_element_by_idで特定の範囲のスクショが可能
+
+〜現状での課題〜
+1、固定のリンク先にしかアクセスができない←←現状Python側でリンクを変える必要がある
+2、Web上で表示する際に画像パスが今は固定で表示している←←その時に取得したものを表示する必要がある
+3、定期的な取得が必要である
+4、取得した情報のカスタマイズが必要かどうか←←ここはまだ簡単そう
+
+

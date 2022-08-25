@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #E6E6E6;
+}
+
+.content{
+    width: 900px;
+    height: 550px;
+    background-color: white;
+    margin: 150px auto;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.content h1{
+    text-align: center;
+    padding: 40px;
+}
