@@ -135,13 +135,15 @@ def task1():
     img_rotate = img.rotate(90)
     img_crop = img_rotate.crop((470, 10, 610, 625))
     img_crop2 = img_crop.convert('RGB')
-    img_crop2.save('./static/img/Today_7F.jpg')
+    img_resize = img_crop2.resize((540, 960))
+    img_resize.save('./static/img/Today_7F.jpeg')
 
 
     img = Image.open('./img/Today_8F.png')
     img_crop = img.crop((170, 25, 485, 340))
     img_crop2 = img_crop.convert('RGB')
-    img_crop2.save('./static/img/Today_8F.jpg')
+    img_resize = img_crop2.resize((540, 960))
+    img_resize.save('./static/img/Today_8F.jpeg')
 
 sched = BackgroundScheduler(daemon=True)
 sched.add_job(task1, 'interval', seconds=5)
@@ -167,11 +169,11 @@ def Today_6F():
 
 @app.route("/Today_7F")
 def Today_7F():
-    img_path = './static/img/Today_7F.jpg'
+    img_path = './static/img/Today_7F.jpeg'
     return render_template('Today_7F.html', img_7F=img_path)
 
 
 @app.route("/Today_8F")
 def Today_8F():
-    img_path = './static/img/Today_8F.jpg'
+    img_path = './static/img/Today_8F.jpeg'
     return render_template('Today_8F.html', img_8F=img_path)
